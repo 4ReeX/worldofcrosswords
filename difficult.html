@@ -1,0 +1,74 @@
+<div class="difficult">
+    <div class="sky"></div>
+    <div class="city"></div>
+    <div class="block">
+       <div class="bubl">
+            <div class="speech">
+                <div class="row diff"></div>
+                <span id="animatable"></span>
+            </div>
+       </div>
+    </div>
+    <div class="block">
+        <img src="img/sova-head.png" alt="">
+    </div>
+
+    <div class="row">
+        <div class="key green"></div>
+        <div class="key yellow"></div>
+        <div class="key red"></div>
+    </div>
+    <div class="btn" onclick="play();">ОК</div>
+</div>
+<script>
+        var $element = $('#animatable');
+        var newText = 'Выберите уровень сложности';
+        bubbleText({
+            element: $element,
+            newText: newText,
+            speed: 1000,
+            repeat: false,
+        });
+    $(".difficult .key").click(function () {
+        $(".difficult .key").removeClass("active");
+        $(this).toggleClass("active");
+        if ($(this).hasClass("green")) {
+            $element.text('');
+            bubbleText({
+                element: $element,
+                newText: 'Длина слова от трех до пяти букв (3-5 слов в кроссворде)',
+                speed: 1500,
+                repeat: false,
+            });
+            $(".diff").text("ЛЕГКИЙ");
+            $(".diff").addClass("green");
+            $(".diff").removeClass("yellow");
+            $(".diff").removeClass("red");
+        } else if ($(this).hasClass("yellow")) {
+            $element.text('');
+            bubbleText({
+                element: $element,
+                newText: "Длина слова от трех до семи букв (5-7 слов в кроссворде)",
+                speed: 1500,
+                repeat: false,
+            });
+            $(".diff").text("СРЕДНИЙ");
+            $(".diff").removeClass("green");
+            $(".diff").addClass("yellow");
+            $(".diff").removeClass("red");
+        } else {
+            $element.text('');
+            bubbleText({
+                element: $element,
+                newText: 'Длина слова от трех до девяти букв (7-10 слов в кроссворде)',
+                speed: 1500,
+                repeat: false,
+            });
+            $(".diff").text("СЛОЖНЫЙ");
+            $(".diff").removeClass("green");
+            $(".diff").removeClass("yellow");
+            $(".diff").addClass("red");
+        }
+    });
+
+</script>
