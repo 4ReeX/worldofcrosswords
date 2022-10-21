@@ -1,0 +1,48 @@
+ <div class="title relative">
+        <div class="big">Сожалеем!</div>
+        <div class="small">Вы допустили более 3 ошибок. <br/>
+             Попробуйте начать заново</div>
+    </div>
+    <div class="content-block">
+        <div class="image">
+            <img src="img/jlose.png" alt="" class="imgwin">
+        </div>
+        <div class="prizes">
+            <a class="row" href="store.html">
+                <div class="icon"><img src="img/wallet/staricon.png" alt=""></div>
+                <div class="value">x<span class="amount" data-num="125">0</span></div>
+            </a>
+            <a class="row" href="store.html">
+                <div class="icon"><img src="img/wallet/criicon.png" alt=""></div>
+                <div class="value">x<span class="amount" data-num="125">0</span></div>
+            </a>
+            <a class="row" href="coupons.html">
+                <div class="icon"><img src="img/wallet/promocode.png" alt=""></div>
+                <div class="value">x<span class="amount" data-num="125">0</span></div>
+            </a>
+            <a class="row" href="puzzle.html">
+                <div class="icon"><img src="img/wallet/puzzleicon.png" alt=""></div>
+                <div class="value">x<span class="amount" data-num="125">0</span></div>
+            </a>
+        </div>
+    </div>
+    <div class="popup-footer">
+        <div class="btn" onclick="closeBtn();">Начать заново</div>
+    </div>
+<script>
+    $(document).ready(function () {
+
+        $('.amount').each(function () {
+            $(this).prop('amount',0).animate({
+                Counter: $(this).text()
+            }, {
+                duration: 1500,
+                easing: 'swing',
+                step: function (now) {
+                    $(this).text(Math.ceil(now));
+                }
+            });
+        });
+
+    });
+</script>

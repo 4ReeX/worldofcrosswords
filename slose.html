@@ -1,32 +1,33 @@
  <div class="title relative">
-        <div class="big">Поздравляем!</div>
-        <div class="small">с <span class="green">1</span> разгаданным словом!</div>
+        <div class="big red">Неудача!</div>
+        <div class="small">Вы допустили более 3 ошибок.</div>
+        <div class="warning">Попробуйте начать заново</div>
     </div>
     <div class="content-block">
         <div class="image">
-            <img src="img/win.png" alt="" class="imgwin">
+            <img src="img/jlose.png" alt="" class="imgwin">
         </div>
         <div class="prizes">
-            <a class="row" href="store.html">
+            <div class="row">
                 <div class="icon"><img src="img/wallet/staricon.png" alt=""></div>
-                <div class="value">x<span class="amount" data-num="125">1000</span></div>
-            </a>
-            <a class="row" href="store.html">
+                <div class="value">x<span class="amount" data-num="125">0</span></div>
+            </div>
+            <div class="row">
                 <div class="icon"><img src="img/wallet/criicon.png" alt=""></div>
-                <div class="value">x<span class="amount" data-num="125">200</span></div>
-            </a>
-            <a class="row" href="coupons.html">
+                <div class="value">x<span class="amount" data-num="125">0</span></div>
+            </div>
+            <div class="row hide">
                 <div class="icon"><img src="img/wallet/promocode.png" alt=""></div>
-                <div class="value">x<span class="amount" data-num="125">1</span></div>
-            </a>
-            <a class="row" href="puzzle.html">
+                <div class="value">x<span class="amount" data-num="125">0</span></div>
+            </div>
+            <div class="row hide">
                 <div class="icon"><img src="img/wallet/puzzleicon.png" alt=""></div>
-                <div class="value">x<span class="amount" data-num="125">2</span></div>
-            </a>
+                <div class="value">x<span class="amount" data-num="125">0</span></div>
+            </div>
         </div>
     </div>
     <div class="popup-footer">
-        <div class="btn" onclick="closeBtn();">OK</div>
+        <div class="btn" onclick="startGame()">Начать заново</div>
     </div>
 <script>
     $(document).ready(function () {

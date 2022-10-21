@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Телепат</title>
+    <title>Мир кроссвордов</title>
     <link rel="stylesheet" href="css/styles.css?12324">
     <link rel="stylesheet" href="css/media.css?124125">
     <link rel="stylesheet" href="css/animations.css">
@@ -26,9 +26,9 @@
                 <img src="img/wallet/star.svg" alt="">
             </div>
         </div>
-        <div class="lvl">
-            1
-        </div>
+<!--        <div class="lvl">-->
+<!--            1-->
+<!--        </div>-->
         <div class="cri">
             <div class="icon-block">
                 <img src="img/cri.png" alt="">
@@ -41,10 +41,7 @@
     <div class="center">
         <div class="table-deck">
             <a href="index.html" class="link back">
-                <span class="icon-back">
-                <img src="img/back2game.png" alt="">
-                <span class="text">Назад в игру</span>
-                </span>
+                <span class="text">	&#x21A9;</span>
             </a>
             <div class="store_title">МАГАЗИН</div>
             <div class="points">
@@ -118,37 +115,55 @@
 
     </div>
     <div class="footer" id="footer">
+        <div class="menu-toggle closed">
+            <img src="img/arrow-up-white.png" alt="">
+        </div>
         <a class="sm-btn" title="Главная" id="ButtonHome" href="index.html">
             <div class="icon-block">
-                <img src="img/home.svg" alt="" class="icon home">
+                <img src="img/home.png" alt="" class="icon home">
             </div>
+            <span class="text">
+                ГЛАВНАЯ
+            </span>
         </a>
         <a class="sm-btn" title="Профиль" id="buttonProfile" href="profile.html">
             <div class="icon-block">
-                <img src="img/user.svg" alt="" class="icon">
+                <img src="img/user.png" alt="" class="icon">
             </div>
+            <span class="text">
+                ПРОФИЛЬ
+            </span>
         </a>
-        <a class="sm-btn store active" id="buttonStore" href="store.html">
+        <a class="sm-btn active" id="buttonStore" href="store.html">
+            <div class="icon-block">
+                <img src="img/store.png" alt="" class="icon">
+            </div>
+            <span class="text">
+                МАГАЗИН
+            </span>
         </a>
         <a class="sm-btn" id="buttonCoupon" href="coupons.html">
             <div class="icon-block">
-                <img src="img/coupin.svg" alt="" class="icon">
+                <img src="img/coupon.png" alt="" class="icon">
             </div>
+            <span class="text">
+                ПРОМОКОДЫ
+            </span>
         </a>
-        <a class="sm-btn" title="Правила игры" onclick="loadRules();" id="buttonRules">
+        <a class="sm-btn" title="Правила игры" onclick="rulesSudoku();" id="buttonRules">
             <div class="icon-block">
-                <img src="img/help.svg" alt="" class="icon">
+                <img src="img/question.png" alt="" class="icon">
             </div>
         </a>
     </div>
     <div class="sub-footer" id="title">
-        <h1 class="title">МАГАЗИН</h1>
+        <h1 class="title"><a href="legal.html">Пользовательское соглашение</a> | <a href="#">Политика обработки данных</a></h1>
     </div>
     <div class="shadow hide"></div>
     <div class="popup hide">
         <a class="close" onclick="closeBtn();">
             <div class="icon-block">
-                <img src="img/close.svg" alt="" class="icon">
+                <img src="img/cross.png" alt="" class="icon">
             </div>
         </a>
         <div class="popup-content"></div>

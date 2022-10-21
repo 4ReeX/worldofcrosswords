@@ -2,11 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Телепат</title>
-    <link rel="stylesheet" href="css/styles.css?saf">
-    <link rel="stylesheet" href="css/media.css?saf">
+    <title>Мир кроссвордов</title>
+
+    <link rel="stylesheet" href="dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/styles.css?sas2f">
+    <link rel="stylesheet" href="css/media.css?sasf2">
     <link rel="stylesheet" href="css/animations.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=no">
     <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
@@ -14,8 +17,11 @@
     <link rel="mask-icon" href="fav/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="dist/owl.carousel.min.js"></script>
 </head>
 <body class="bg" onload="wellcome()">
+<!--<body class="bg">-->
 <div class="layout">
     <div class="header">
         <a class="coin" href="store.html">
@@ -39,66 +45,77 @@
         </a>
     </div>
     <div class="center">
-        <div class="level">
-            <div class="block-level">
-                <div class="c1">
-                    <div class="c2">
-                        <div class="c3">
-                            <div class="number">1</div>
-                            <div class="text">СЛОВО</div>
-                        </div>
-                    </div>
+        <div class="change-game owl-carousel" id="change_game">
+            <div class="item">
+                <div class="game-cha japan">
+                    <div class="name">Японские кроссворды</div>
+                    <a class="play" href="game-japan.html"></a>
                 </div>
             </div>
-            <div class="buttons-group">
-                <a class="btn" onclick="startGame();">
-                    <div class="btn-text">
-                        Новая игра
-                    </div>
-                </a>
-                <a class="btn" onclick="startGame();">
-                    <div class="btn-text">
-                        Продолжить
-                    </div>
-                </a>
+            <div class="item">
+                <div class="game-cha sudoku">
+                    <div class="name">Судоку</div>
+                    <a class="play" href="game-sudoku.html"></a>
+                </div>
             </div>
-
+            <div class="item">
+                <div class="game-cha fill-words">
+                    <div class="name">Филлворды</div>
+                    <a class="play" href="game-fillwords.html"></a>
+                </div>
+            </div>
         </div>
-
-
     </div>
     <div class="footer" id="footer">
+        <div class="menu-toggle closed">
+            <img src="img/arrow-up-white.png" alt="">
+        </div>
         <a class="sm-btn active" title="Главная" id="ButtonHome" href="index.html">
             <div class="icon-block">
-                <img src="img/home.svg" alt="" class="icon home">
+                <img src="img/home.png" alt="" class="icon home">
             </div>
+            <span class="text">
+                ГЛАВНАЯ
+            </span>
         </a>
         <a class="sm-btn" title="Профиль" id="buttonProfile" href="profile.html">
             <div class="icon-block">
-                <img src="img/user.svg" alt="" class="icon">
+                <img src="img/user.png" alt="" class="icon">
             </div>
+            <span class="text">
+                ПРОФИЛЬ
+            </span>
         </a>
         <a class="sm-btn store" id="buttonStore" href="store.html">
+            <div class="icon-block">
+                <img src="img/store.png" alt="" class="icon">
+            </div>
+            <span class="text">
+                МАГАЗИН
+            </span>
         </a>
         <a class="sm-btn" id="buttonCoupon" href="coupons.html">
             <div class="icon-block">
-                <img src="img/coupin.svg" alt="" class="icon">
+                <img src="img/coupon.png" alt="" class="icon">
             </div>
+            <span class="text">
+                ПРОМОКОДЫ
+            </span>
         </a>
-        <a class="sm-btn" title="Правила игры" onclick="loadRules();" id="buttonRules">
+        <a class="sm-btn" title="Правила игры" onclick="rulesSudoku();" id="buttonRules">
             <div class="icon-block">
-                <img src="img/help.svg" alt="" class="icon">
+                <img src="img/question.png" alt="" class="icon">
             </div>
         </a>
     </div>
     <div class="sub-footer" id="title">
-        <h1 class="title">ПАО "Вымпелком" <a href="legal.html">Пользовательское соглашение</a></h1>
+        <h1 class="title"><a href="legal.html">Пользовательское соглашение</a> | <a href="#">Политика обработки данных</a></h1>
     </div>
     <div class="shadow hide"></div>
     <div class="popup hide">
         <a class="close" onclick="closeBtn();">
             <div class="icon-block">
-                <img src="img/close.svg" alt="" class="icon">
+                <img src="img/cross.png" alt="" class="icon">
             </div>
         </a>
         <div class="popup-content"></div>
@@ -110,7 +127,44 @@
         <span>вертикальное положение.</span> <br> Так ведь намного удобнее ;)
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    jQuery(function($){
+        $('.owl-carousel').owlCarousel({
+            loop:false,
+            margin:25,
+            dots:true,
+            autoplay:false,
+            items:3,
+            center: true,
+            startPosition: 1,
+            stagePadding: 70,
+            responsive:{
+                0:{
+                    items:1
+                },
+                640:{
+                    items:2
+                },
+                768 :{
+                    items:3,
+                    dots:false,
+                    mouseDrag:false
+                },
+                1340 :{
+                    items:3,
+                    dots:false,
+                },
+                1500 :{
+                    items:3,
+                    dots:false,
+                    mouseDrag:false
+                },
+            }
+        })
+    });
+</script>
+
+
 <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
