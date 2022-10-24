@@ -29,6 +29,10 @@
 }
 
 @media screen and (min-width: 641px) {
+    .sudo .row .key {
+        max-width: 5vh!important;
+        max-height: 5vh!important;
+    }
     .change-game {
         max-width: 100%;
     }
@@ -48,9 +52,14 @@
 }
 
 @media screen and (max-width: 640px) {
+    .coupons {
+        max-width: 90%;
+        margin: 0 auto;
+    }
     .center {
         justify-content: space-evenly;
         height: 100%;
+        max-height: calc(100vh - 70px - 68px);
     }
     .prompt {
         margin-bottom: 0;
@@ -60,12 +69,12 @@
     }
     .footer {
         position: relative;
-        padding: 10px 30px;
+        padding: 0 30px 10px;
     }
     .footer.closed {
         position: relative;
-        margin-bottom: -65px;
-        padding: 10px 30px;
+        margin-bottom: -125px;
+        padding: 0 30px 10px;
         transition: margin-bottom 0.3s ease-in-out;
     }
     .menu-toggle {
@@ -186,23 +195,11 @@
     .profile {
         display: flex;
         flex-direction: column;
-        justify-content: flex-end;
+        justify-content: space-evenly;
         align-items: center;
         height: 100%;
         width: 100%;
-        position: absolute;
-        bottom: 40px;
-        top: 120px;
-    }
-
-    .footer {
         position: relative;
-        bottom: 0;
-        padding: 10px 30px;
-        width: 100%;
-        max-width: 640px;
-        z-index: 10;
-        transition: bottom 0.3s ease-in-out;
     }
 
     .pop .text {
@@ -363,7 +360,6 @@
 
 @media screen and (max-width: 320px) {
     .game {
-        margin-left: 30px;
         margin-bottom: 2px;
     }
     .keyboard {
@@ -377,9 +373,6 @@
 }
 
 @media screen and (max-height: 667px) {
-    .coupons {
-        height: 85%;
-    }
 }
 @media only screen and (width : 375px) and (height : 667px)
 {
@@ -391,7 +384,7 @@
         position: relative;
         gap: 15px;
         width: auto;
-        margin: 0px auto;
+        margin: 0 auto;
     }
 
 }

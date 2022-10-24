@@ -39,39 +39,141 @@
         </a>
     </div>
     <div class="center">
-        <div class="prompt">
-            <div class="btn-block-help" id="helpers">
-                <div class="sm-btn" style="background: #f2ae3e;" title="Убрать букву" onclick="letter1();">
-                    <div class="icon-block">
-                        1
+
+        <div class="game sudo">
+            <div class="prompt">
+                <div class="btn-block-help" id="helpers">
+                    <div class="sm-btn" style="background: #f2ae3e;" onclick="sletter1();">
+                        <div class="icon-block">
+                            1
+                        </div>
+                        <div class="value">
+                            <div class="amount">5</div>
+                            <div class="cri"><img src="img/cri.png" alt=""></div>
+                        </div>
                     </div>
-                    <div class="value">
-                        <div class="amount">5</div>
-                        <div class="cri"><img src="img/cri.png" alt=""></div>
+                    <div class="sm-btn" style="background: #8e9c44" onclick="sletter2();">
+                        <div class="icon-block">
+                            5
+                        </div>
+                        <div class="value">
+                            <div class="amount">15</div>
+                            <div class="cri"><img src="img/cri.png" alt=""></div>
+                        </div>
+                    </div>
+                    <div class="sm-btn"  style="background: #1f436a;"  onclick="sletter3();">
+                        <div class="icon-block padding">
+                            <img src="img/lamp.png" alt="">
+                        </div>
+                        <div class="value">
+                            <div class="amount">50</div>
+                            <div class="cri"><img src="img/cri.png" alt=""></div>
+                        </div>
                     </div>
                 </div>
-                <div class="sm-btn" style="background: #8e9c44" title="Показать букву не на своем месте" onclick="letter2();">
-                    <div class="icon-block">
-                        5
-                    </div>
-                    <div class="value">
-                        <div class="amount">15</div>
-                        <div class="cri"><img src="img/cri.png" alt=""></div>
-                    </div>
+            </div>
+            <div class="sudo-table">
+                <div class="row">
+                    <div class="key">1</div>
+                    <div class="key">2</div>
+                    <div class="key">3</div>
+                    <div class="key">4</div>
+                    <div class="key">5</div>
+                    <div class="key">6</div>
+                    <div class="key">7</div>
+                    <div class="key">8</div>
+                    <div class="key">9</div>
                 </div>
-                <div class="sm-btn"  style="background: #1f436a;"  title="Показать букву на своем месте">
-                    <div class="icon-block padding">
-                        <img src="img/lamp.png" alt="">
-                    </div>
-                    <div class="value">
-                        <div class="amount">50</div>
-                        <div class="cri"><img src="img/cri.png" alt=""></div>
-                    </div>
+                <div class="row">
+                    <div class="key">1</div>
+                    <div class="key">2</div>
+                    <div class="key">3</div>
+                    <div class="key">4</div>
+                    <div class="key">5</div>
+                    <div class="key">6</div>
+                    <div class="key">7</div>
+                    <div class="key">8</div>
+                    <div class="key">9</div>
+                </div>
+                <div class="row">
+                    <div class="key active">1</div>
+                    <div class="key active">2</div>
+                    <div class="key active">3</div>
+                    <div class="key fone">4</div>
+                    <div class="key fone">5</div>
+                    <div class="key fone">6</div>
+                    <div class="key">7</div>
+                    <div class="key">8</div>
+                    <div class="key">9</div>
+                </div>
+                <div class="row">
+                    <div class="key">1</div>
+                    <div class="key">2</div>
+                    <div class="key">3</div>
+                    <div class="key">4</div>
+                    <div class="key">5</div>
+                    <div class="key">6</div>
+                    <div class="key">7</div>
+                    <div class="key">8</div>
+                    <div class="key">9</div>
+                </div>
+                <div class="row">
+                    <div class="key">1</div>
+                    <div class="key">2</div>
+                    <div class="key">3</div>
+                    <div class="key">4</div>
+                    <div class="key">5</div>
+                    <div class="key">6</div>
+                    <div class="key">7</div>
+                    <div class="key">8</div>
+                    <div class="key">9</div>
+                </div>
+                <div class="row">
+                    <div class="key">1</div>
+                    <div class="key">2</div>
+                    <div class="key">3</div>
+                    <div class="key">4</div>
+                    <div class="key">5</div>
+                    <div class="key">6</div>
+                    <div class="key">7</div>
+                    <div class="key">8</div>
+                    <div class="key">9</div>
+                </div>
+                <div class="row">
+                    <div class="key">1</div>
+                    <div class="key">2</div>
+                    <div class="key">3</div>
+                    <div class="key">4</div>
+                    <div class="key">5</div>
+                    <div class="key">6</div>
+                    <div class="key">7</div>
+                    <div class="key">8</div>
+                    <div class="key">9</div>
+                </div>
+                <div class="row">
+                    <div class="key">1</div>
+                    <div class="key">2</div>
+                    <div class="key">3</div>
+                    <div class="key">4</div>
+                    <div class="key">5</div>
+                    <div class="key">6</div>
+                    <div class="key">7</div>
+                    <div class="key">8</div>
+                    <div class="key">9</div>
+                </div>
+                <div class="row">
+                    <div class="key">1</div>
+                    <div class="key">2</div>
+                    <div class="key">3</div>
+                    <div class="key">4</div>
+                    <div class="key">5</div>
+                    <div class="key">6</div>
+                    <div class="key">7</div>
+                    <div class="key" onclick="loadSWin()">w</div>
+                    <div class="key" onclick="loadSLose()">l</div>
                 </div>
             </div>
-        </div>
-        <div class="game sudo c9">
-            <div class="row">
+            <div class="row buttons" id="buttons">
                 <div class="key">1</div>
                 <div class="key">2</div>
                 <div class="key">3</div>
@@ -82,105 +184,6 @@
                 <div class="key">8</div>
                 <div class="key">9</div>
             </div>
-            <div class="row">
-                <div class="key">1</div>
-                <div class="key">2</div>
-                <div class="key">3</div>
-                <div class="key">4</div>
-                <div class="key">5</div>
-                <div class="key">6</div>
-                <div class="key">7</div>
-                <div class="key">8</div>
-                <div class="key">9</div>
-            </div>
-            <div class="row">
-                <div class="key active">1</div>
-                <div class="key active">2</div>
-                <div class="key active">3</div>
-                <div class="key fone">4</div>
-                <div class="key fone">5</div>
-                <div class="key fone">6</div>
-                <div class="key">7</div>
-                <div class="key">8</div>
-                <div class="key">9</div>
-            </div>
-            <div class="row">
-                <div class="key">1</div>
-                <div class="key">2</div>
-                <div class="key">3</div>
-                <div class="key">4</div>
-                <div class="key">5</div>
-                <div class="key">6</div>
-                <div class="key">7</div>
-                <div class="key">8</div>
-                <div class="key">9</div>
-            </div>
-            <div class="row">
-                <div class="key">1</div>
-                <div class="key">2</div>
-                <div class="key">3</div>
-                <div class="key">4</div>
-                <div class="key">5</div>
-                <div class="key">6</div>
-                <div class="key">7</div>
-                <div class="key">8</div>
-                <div class="key">9</div>
-            </div>
-            <div class="row">
-                <div class="key">1</div>
-                <div class="key">2</div>
-                <div class="key">3</div>
-                <div class="key">4</div>
-                <div class="key">5</div>
-                <div class="key">6</div>
-                <div class="key">7</div>
-                <div class="key">8</div>
-                <div class="key">9</div>
-            </div>
-            <div class="row">
-                <div class="key">1</div>
-                <div class="key">2</div>
-                <div class="key">3</div>
-                <div class="key">4</div>
-                <div class="key">5</div>
-                <div class="key">6</div>
-                <div class="key">7</div>
-                <div class="key">8</div>
-                <div class="key">9</div>
-            </div>
-            <div class="row">
-                <div class="key">1</div>
-                <div class="key">2</div>
-                <div class="key">3</div>
-                <div class="key">4</div>
-                <div class="key">5</div>
-                <div class="key">6</div>
-                <div class="key">7</div>
-                <div class="key">8</div>
-                <div class="key">9</div>
-            </div>
-            <div class="row">
-                <div class="key">1</div>
-                <div class="key">2</div>
-                <div class="key">3</div>
-                <div class="key">4</div>
-                <div class="key">5</div>
-                <div class="key">6</div>
-                <div class="key">7</div>
-                <div class="key" onclick="loadSWin()">w</div>
-                <div class="key" onclick="loadSLose()">l</div>
-            </div>
-        </div>
-        <div class="row buttons" id="buttons">
-            <div class="key">1</div>
-            <div class="key">2</div>
-            <div class="key">3</div>
-            <div class="key">4</div>
-            <div class="key">5</div>
-            <div class="key">6</div>
-            <div class="key">7</div>
-            <div class="key">8</div>
-            <div class="key">9</div>
         </div>
 
     </div>
@@ -250,8 +253,21 @@
     }
 
 </script>
-
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    var key = $('.key');
+    var gameHeight =  $('.game');
+    var rowLength = $('.sudo-table').children('.row').length;
+    function reportHeight() {
+        var gameWidth = $('.center').width()*0.6;
+        gameHeight.css('max-height', gameWidth);
+        key.css('max-height',gameWidth/rowLength);
+        key.css('max-width',gameWidth/rowLength);
+    }
+    window.onload = reportHeight;
+    window.onresize = reportHeight;
+
+</script>
 <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>

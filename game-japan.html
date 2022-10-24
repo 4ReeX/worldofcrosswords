@@ -39,39 +39,40 @@
             </div>
         </a>
     </div>
-    <div class="center">
-        <div class="prompt">
-            <div class="btn-block-help" id="helpers">
-                <div class="sm-btn" style="background: #f2ae3e;" title="Убрать букву" onclick="letter1();">
-                    <div class="icon-block">
-                        1
+    <div class="center japanHeight">
+
+        <div class="game japan-game c15">
+            <div class="prompt">
+                <div class="btn-block-help" id="helpers">
+                    <div class="sm-btn" style="background: #f2ae3e;" onclick="jletter1();">
+                        <div class="icon-block">
+                            1
+                        </div>
+                        <div class="value">
+                            <div class="amount">5</div>
+                            <div class="cri"><img src="img/cri.png" alt=""></div>
+                        </div>
                     </div>
-                    <div class="value">
-                        <div class="amount">5</div>
-                        <div class="cri"><img src="img/cri.png" alt=""></div>
+                    <div class="sm-btn" style="background: #8e9c44" onclick="jletter2();">
+                        <div class="icon-block">
+                            5
+                        </div>
+                        <div class="value">
+                            <div class="amount">15</div>
+                            <div class="cri"><img src="img/cri.png" alt=""></div>
+                        </div>
                     </div>
-                </div>
-                <div class="sm-btn" style="background: #8e9c44" title="Показать букву не на своем месте" onclick="letter2();">
-                    <div class="icon-block">
-                        5
-                    </div>
-                    <div class="value">
-                        <div class="amount">15</div>
-                        <div class="cri"><img src="img/cri.png" alt=""></div>
-                    </div>
-                </div>
-                <div class="sm-btn"  style="background: #1f436a;"  title="Показать букву на своем месте">
-                    <div class="icon-block padding">
-                        <img src="img/lamp.png" alt="">
-                    </div>
-                    <div class="value">
-                        <div class="amount">50</div>
-                        <div class="cri"><img src="img/cri.png" alt=""></div>
+                    <div class="sm-btn"  style="background: #1f436a;" onclick="jletter3();">
+                        <div class="icon-block padding">
+                            <img src="img/lamp.png" alt="">
+                        </div>
+                        <div class="value">
+                            <div class="amount">50</div>
+                            <div class="cri"><img src="img/cri.png" alt=""></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="game japan-game c15">
             <div class="row">
                 <div class="key space"></div>
                 <div class="key col">
@@ -222,6 +223,7 @@
                 <div class="key" onclick="loadJWin()">W</div>
                 <div class="key" onclick="loadJLose()">L</div>
             </div>
+
         </div>
         <div class="tumbler" id="tumbler">
             <div class="tumb cross active"><img src="img/cross.png" alt=""></div>
