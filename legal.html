@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Телепат</title>
-    <link rel="stylesheet" href="css/styles.css?12324">
-    <link rel="stylesheet" href="css/media.css?124125">
+    <title>Мир кроссвордов</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="css/animations.css">
-    <meta name="viewport" content="width=device-width, initial-scale=0.9, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
@@ -17,8 +17,7 @@
 </head>
 <body class="bg">
 <div class="layout">
-
-    <div class="center relative">
+    <div class="center">
         <div class="agreement">
             <h2>Сервис «Загадки и пазлы»</h2>
             <h2>Пользовательское соглашение</h2>
@@ -59,11 +58,39 @@
         <div class="sm-btn back" onclick="javascript:goToURL()">
             <img src="https://telepat.via-mobi.com/63/img/63/telepat/back.png" alt="" class="btn-icon" />
         </div>
-
-
+        </div>
     </div>
-    <div class="sub-footer" id="title">
-        <h1 class="title">ПАО "Вымпелком" <a href="#">Пользовательское соглашение</a></h1>
+
+
+    <div class="footer" id="footer">
+        <div class="menu-toggle closed">
+            <img src="img/arrow-up-white.png" alt="">
+        </div>
+        <a class="sm-btn" title="Главная" id="ButtonHome" href="index.html">
+            <div class="icon-block">
+                <img src="img/home.png" alt="" class="icon home">
+            </div>
+        </a>
+        <a class="sm-btn" title="Профиль" id="buttonProfile" href="profile.html">
+            <div class="icon-block">
+                <img src="img/user.png" alt="" class="icon">
+            </div>
+        </a>
+        <a class="sm-btn store" id="buttonStore" href="store.html">
+            <div class="icon-block">
+                <img src="img/store.png" alt="" class="icon">
+            </div>
+        </a>
+        <a class="sm-btn" id="buttonCoupon" href="coupons.html">
+            <div class="icon-block">
+                <img src="img/coupon.png" alt="" class="icon">
+            </div>
+        </a>
+        <a class="sm-btn" title="Правила игры" onclick="rulesSudoku();" id="buttonRules">
+            <div class="icon-block">
+                <img src="img/question.png" alt="" class="icon">
+            </div>
+        </a>
     </div>
     <div class="shadow hide"></div>
     <div class="popup hide">
@@ -73,9 +100,23 @@
             </div>
         </a>
         <div class="popup-content"></div>
+
+    </div>
+    <div class="rules-pop hide"></div>
+</div>
+
+<div class="zaglushka">
+    <div class="col"><img src="img/sova-rotate.png" alt=""></div>
+    <div class="col">Пожалуйста переверните телефон в <br>
+        <span>вертикальное положение.</span> <br> Так ведь намного удобнее ;)
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
+
+
+
+
+

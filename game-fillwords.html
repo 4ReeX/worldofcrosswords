@@ -14,6 +14,8 @@
     <link rel="mask-icon" href="fav/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="theme-color" content="#ffffff">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </head>
 <body class="bg">
 <div class="bg2"></div>
@@ -27,7 +29,7 @@
                 <img src="img/wallet/star.svg" alt="">
             </div>
         </a>
-        <div class="lvl lvl-name">
+        <div class="lvl">
             1
         </div>
         <a class="cri" href="store.html">
@@ -40,6 +42,7 @@
         </a>
     </div>
     <div class="center">
+        <div class="lvl-name">Усатые-полосатые</div>
         <div class="btn-block-help" id="helpers">
             <div class="sm-btn" style="background: #f2ae3e;" title="Убрать букву" onclick="letter1();">
                 <div class="icon-block">
@@ -59,7 +62,7 @@
                     <div class="cri"><img src="img/cri.png" alt=""></div>
                 </div>
             </div>
-            <div class="sm-btn"  style="background: #1f436a;"  title="Показать букву на своем месте">
+            <div class="sm-btn"  style="background: #1f436a;"  title="Показать букву на своем месте" onclick="letter3();">
                 <div class="icon-block">
                     <img src="img/word.svg" alt="">
                 </div>
@@ -69,60 +72,59 @@
                 </div>
             </div>
         </div>
-        <div class="game fill c6">
+        <div class="game fill">
             <div class="row">
-                <div class="key blue">С</div>
-                <div class="key blue">О</div>
-                <div class="key yellow">Б</div>
-                <div class="key">Р</div>
-                <div class="key">П</div>
-                <div class="key">П</div>
+                <div class="key key-light-blue">C</div>
+                <div class="key key-light-blue">О</div>
+                <div class="key key-light-blue">К</div>
+                <div class="key key-gray">Р</div>
+                <div class="key key-gray">О</div>
+                <div class="key key-gray" onclick="loadFWin()">В</div>
             </div>
             <div class="row">
-                <div class="key blue">С</div>
-                <div class="key blue">О</div>
-                <div class="key yellow">Б</div>
-                <div class="key">Р</div>
-                <div class="key">П</div>
-                <div class="key">П</div>
-            </div>
-            <div class="row">
-                <div class="key blue">С</div>
-                <div class="key blue">О</div>
-                <div class="key yellow">Б</div>
-                <div class="key">Р</div>
-                <div class="key">П</div>
-                <div class="key">П</div>
-            </div>
-            <div class="row">
-                <div class="key blue">С</div>
-                <div class="key blue">О</div>
-                <div class="key yellow">Б</div>
-                <div class="key">Р</div>
-                <div class="key">П</div>
-                <div class="key">П</div>
-            </div>
-            <div class="row">
-                <div class="key blue">С</div>
-                <div class="key blue">О</div>
-                <div class="key yellow">Б</div>
-                <div class="key">Р</div>
-                <div class="key">П</div>
-                <div class="key">П</div>
-            </div>
-            <div class="row">
-                <div class="key blue">С</div>
-                <div class="key blue">О</div>
-                <div class="key yellow">Б</div>
+                <div class="key key-green">М</div>
+                <div class="key">С</div>
+                <div class="key">О</div>
+                <div class="key">Б</div>
                 <div class="key">Р</div>
                 <div class="key" onclick="loadFWin()">W</div>
-                <div class="key">5</div>
+            </div>
+            <div class="row">
+                <div class="key key-green">О</div>
+                <div class="key key-blue">С</div>
+                <div class="key key-blue">О</div>
+                <div class="key key-blue">Б</div>
+                <div class="key">Р</div>
+                <div class="key" onclick="loadFWin()">W</div>
+            </div>
+            <div class="row">
+                <div class="key key-green">Д</div>
+                <div class="key key-orange">И</div>
+                <div class="key key-orange">Б</div>
+                <div class="key key-blue">А</div>
+                <div class="key">Р</div>
+                <div class="key" onclick="loadFWin()">W</div>
+            </div>
+            <div class="row">
+                <div class="key key-green">А</div>
+                <div class="key key-orange">С</div>
+                <div class="key key-orange">О</div>
+                <div class="key key-blue">К</div>
+                <div class="key">Р</div>
+                <div class="key" onclick="loadFWin()">W</div>
+            </div>
+            <div class="row">
+                <div class="key key-orange">О</div>
+                <div class="key key-orange">С</div>
+                <div class="key key-orange">О</div>
+                <div class="key key-blue">А</div>
+                <div class="key">Р</div>
+                <div class="key" onclick="loadFWin()">W</div>
             </div>
         </div>
-
     </div>
-    <div class="footer closed" id="footer">
-        <div class="menu-toggle">
+    <div class="footer" id="footer">
+        <div class="menu-toggle closed">
             <img src="img/arrow-up-white.png" alt="">
         </div>
         <a class="sm-btn" title="Главная" id="ButtonHome" href="index.html">
@@ -171,7 +173,23 @@
         <span>вертикальное положение.</span> <br> Так ведь намного удобнее ;)
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+<script>
+    var key = $('.key');
+    var row =  $('.row');
+    var rowLength = $('.row').length;
+    function reportHeight() {
+        var gameWidth = $('.game').width();
+        var gameHeight = $('.game').height();
+        console.log(gameWidth, gameHeight)
+        console.log("всего ячеек: ", rowLength)
+        key.css('height', (gameHeight-20)/rowLength)
+        key.css('width', (gameHeight-20)/rowLength)
+    }
+    window.onload = reportHeight;
+    window.onresize = reportHeight;
+</script>
 <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
